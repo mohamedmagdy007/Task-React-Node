@@ -1,0 +1,10 @@
+const User = require('./controller')
+const upload = require('../upload')
+const userRouter = require('express').Router()
+userRouter.get('/',User.getAllUsers)
+userRouter.get('/users/:id',User.getUserDetails)
+userRouter.get('/users?',User.getUserByName)
+userRouter.post('/users',upload,User.createNewUser)
+userRouter.put('/users/:id',upload,User.updateUser)
+userRouter.delete('/users/:id',User.deleteUser)
+module.exports = userRouter
