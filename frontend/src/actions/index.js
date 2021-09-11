@@ -62,7 +62,6 @@ export const clearDetails=()=>{
 export const creatNewUser = async (user)=>{
      try {
      let response = await axios.post('http://localhost:8000/users', user);
-
         if (response.status === 201) {
           response = await axios.get('http://localhost:8000/users');
           return {
@@ -71,9 +70,8 @@ export const creatNewUser = async (user)=>{
           };
         } else return { type: "USER_CREATED", payload: [] };
       } catch (err) {
-    console.log(err);
-      }
-   
+        console.log(err);
+      } 
 }
 export const Edit_Profile = async (id,user)=>{
     try {

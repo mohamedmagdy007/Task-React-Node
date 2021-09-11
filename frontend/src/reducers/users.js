@@ -6,7 +6,6 @@ export  const users = (state={},action)=>{
         case 'NEW_USER':
             return {...state,list:action.payload}
         
-       
         case 'CLEAR_Details':
         case 'USER_DETAILS':
         case 'EDIT_USER':
@@ -15,5 +14,4 @@ export  const users = (state={},action)=>{
         default:
             return state
     }
-    
 }

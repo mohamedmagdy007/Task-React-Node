@@ -4,6 +4,7 @@ import {getAllUser} from "../actions/index"
 import { Link } from "react-router-dom"
 const AllUser=()=>{
     const users = useSelector((state)=>state.users.list)
+    console.log(users)
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(getAllUser())
